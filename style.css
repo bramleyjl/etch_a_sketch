@@ -1,0 +1,27 @@
+#box {
+	height: 960px;
+	width: 960px;
+}
+
+button {
+	height: 20px;
+	width: 50px;
+}
+
+tr > div {
+	height: 50px;
+	width: 50px;
+	background-color: #808080;
+	display: inline-block;
+	float: left;
+}
+
+thead {
+	height: 100px;
+	width: 100px;
+	background-color: #ff0000;
+}
+
+.mouseOver {
+	background-color: #00ff99;
+}
