@@ -1,0 +1,104 @@
+[33mcommit c5ab785adbb7a69f46faaf9229f45b51cf8ba0fb[m
+Author: John <bramleyjl@gmail.com>
+Date:   Wed Mar 8 20:27:56 2017 +0800
+
+    etch a sketch project started
+
+[1mdiff --git a/index.html b/index.html[m
+[1mnew file mode 100644[m
+[1mindex 0000000..5793a6c[m
+[1m--- /dev/null[m
+[1m+++ b/index.html[m
+[36m@@ -0,0 +1,18 @@[m
+[32m+[m[32m<!DOCTYPE html>[m
+[32m+[m[32m<html>[m
+[32m+[m[32m<head>[m
+[32m+[m	[32m<title>jQuery Project</title>[m
+[32m+[m	[32m<link rel="stylesheet" type="text/css" href="style.css">[m
+[32m+[m	[32m<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>[m
+[32m+[m	[32m<script type="text/javascript" src="script.js"></script>[m
+[32m+[m[32m</head>[m
+[32m+[m[32m<body>[m
+[32m+[m
+[32m+[m[32m<button type="button">Reset</button>[m
+[32m+[m
+[32m+[m[32m<div id="box">[m
+[32m+[m
+[32m+[m[32m</div>[m
+[32m+[m
+[32m+[m[32m</body>[m
+[32m+[m[32m</html>[m
+\ No newline at end of file[m
+[1mdiff --git a/script.js b/script.js[m
+[1mnew file mode 100644[m
+[1mindex 0000000..3ccb4dd[m
+[1m--- /dev/null[m
+[1m+++ b/script.js[m
+[36m@@ -0,0 +1,32 @@[m
+[32m+[m[32m$(document).ready(function(){[m
+[32m+[m
+[32m+[m	[32mvar table = $('<table></table>');[m
+[32m+[m	[32m$('#box').append(table)[m
+[32m+[m
+[32m+[m	[32mvar rowNum = 16;[m
+[32m+[m	[32mfor (var x = 0; x < rowNum; x++) {[m
+[32m+[m
+[32m+[m		[32mvar row = $('<tr></tr>');[m
+[32m+[m		[32m$(table).append(row);[m
+[32m+[m
+[32m+[m		[32mvar colNum = 16;[m
+[32m+[m		[32mfor (var i = 0; i < colNum; i++) {[m
+[32m+[m			[32mvar block = $("<div></div>");[m
+[32m+[m			[32m$(row).append(block);[m
+[32m+[m		[32m};[m
+[32m+[m	[32m};[m
+[32m+[m[41m	[m
+[32m+[m
+[32m+[m	[32m$("tr > div").hover([m
+[32m+[m		[32mfunction() {[m
+[32m+[m			[32m$(this).addClass("mouseOver");[m
+[32m+[m		[32m});[m
+[32m+[m
+[32m+[m	[32m$("button").click([m
+[32m+[m		[32mfunction() {[m
+[32m+[m			[32mvar reset = prompt("How many squares would you like?");[m
+[32m+[m			[32m$("tr > div").removeClass("mouseOver");[m
+[32m+[m			[32mrowNum = reset;[m
+[32m+[m			[32mcolNum = reset;[m
+[32m+[m		[32m})[m
+[32m+[m[32m});[m
+\ No newline at end of file[m
+[1mdiff --git a/style.css b/style.css[m
+[1mnew file mode 100644[m
+[1mindex 0000000..53f821f[m
+[1m--- /dev/null[m
+[1m+++ b/style.css[m
+[36m@@ -0,0 +1,27 @@[m
+[32m+[m[32m#box {[m
+[32m+[m	[32mheight: 960px;[m
+[32m+[m	[32mwidth: 960px;[m
+[32m+[m[32m}[m
+[32m+[m
+[32m+[m[32mbutton {[m
+[32m+[m	[32mheight: 20px;[m
+[32m+[m	[32mwidth: 50px;[m
+[32m+[m[32m}[m
+[32m+[m
+[32m+[m[32mtr > div {[m
+[32m+[m	[32mheight: 50px;[m
+[32m+[m	[32mwidth: 50px;[m
+[32m+[m	[32mbackground-color: #808080;[m
+[32m+[m	[32mdisplay: inline-block;[m
+[32m+[m	[32mfloat: left;[m
+[32m+[m[32m}[m
+[32m+[m
+[32m+[m[32mthead {[m
+[32m+[m	[32mheight: 100px;[m
+[32m+[m	[32mwidth: 100px;[m
+[32m+[m	[32mbackground-color: #ff0000;[m
+[32m+[m[32m}[m
+[32m+[m
+[32m+[m[32m.mouseOver {[m
+[32m+[m	[32mbackground-color: #00ff99;[m
+[32m+[m[32m}[m
+\ No newline at end of file[m
