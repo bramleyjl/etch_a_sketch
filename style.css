@@ -1,27 +1,35 @@
-#box {
-	height: 960px;
+h1 {
+	width: 960px;
+	font-family: georgia, serif;
+	text-align: center;
+}
+
+#buttonbars {
 	width: 960px;
 }
 
 button {
-	height: 20px;
-	width: 50px;
-}
-
-tr > div {
-	height: 50px;
-	width: 50px;
-	background-color: #808080;
+	height: 75px;
+	width: 225px;
 	display: inline-block;
-	float: left;
+	margin: ;
+	border: none;
 }
 
-thead {
-	height: 100px;
-	width: 100px;
-	background-color: #ff0000;
+table {
+	height: 960px;
+	width: 960px;
+	border-collapse: collapse;
+	border-spacing: 0px;
+
+}
+
+.pixel {
+background-color: #000000;
+display: inline-block;
 }
 
 .mouseOver {
-	background-color: #00ff99;
+background-color: #ffffff;
 }
+
