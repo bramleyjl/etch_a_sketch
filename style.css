@@ -1,27 +1,42 @@
-h1 {
+
+
+h1, h3 {
 	width: 960px;
 	font-family: georgia, serif;
 	text-align: center;
 }
 
+#box {
+	text-align: center;
+}
+
 #buttonbars {
 	width: 960px;
+	margin-bottom: 10px;
 }
 
 button {
 	height: 75px;
-	width: 225px;
+	width: 200px;
 	display: inline-block;
-	margin: ;
 	border: none;
+	border-radius: 25px;
+	outline: none;
 }
 
 table {
 	height: 960px;
 	width: 960px;
 	border-collapse: collapse;
-	border-spacing: 0px;
+	border-spacing: 0;
+	padding: 0px;
+}
 
+tr {
+	border-collapse: collapse;
+	border-spacing: 0;
+	display: block;
+	padding: 0px;
 }
 
 .pixel {
